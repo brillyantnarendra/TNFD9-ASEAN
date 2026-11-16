@@ -1,0 +1,45 @@
+A. Unit di banding_5model_100: 100, ditemukan di label_per_unit: 100
+   Label coder1 BERBEDA dari kolom emas: 0 unit 
+
+B. Label mayoritas tiga pengode
+   Unit dengan mayoritas: 94 | tanpa mayoritas (dikeluarkan): 6
+   Unit yang label mayoritasnya BERBEDA dari coder1: 8
+   Sebaran label mayoritas: {'B1': 18, 'B3': 17, 'A3': 13, 'B4': 12, 'bukan alam': 11, 'B5': 11, 'A2': 7, 'B2': 3, 'bukan alam, iklim': 2}
+
+   Run                     n  akurasi kappa vs mayoritas [SK]    kappa vs coder1
+   GPT-6 Astra*           94    0.702    0.659 [0.549, 0.764]        0.695
+   Gemini 3.8 Flash*      94    0.787    0.756 [0.656, 0.851]        0.755
+   DeepSeek V4 (T)*       94    0.723    0.684 [0.575, 0.780]        0.695
+   DeepSeek V4            94    0.681    0.638 [0.531, 0.739]        0.600
+   Command A              94    0.628    0.579 [0.474, 0.685]        0.540
+   coder2                 94    0.904    0.889
+   coder3                 94    0.830    0.804
+
+C. Sensitivitas: unit tanpa mayoritas diputus oleh coder1 (n = 100)
+   GPT-6 Astra*         kappa 0.634  akurasi 0.680
+   Gemini 3.8 Flash*    kappa 0.714  akurasi 0.750
+   DeepSeek V4 (T)*     kappa 0.647  akurasi 0.690
+   DeepSeek V4          kappa 0.604  akurasi 0.650
+   Command A            kappa 0.549  akurasi 0.600
+
+D. Tolok ukur setara (acuan = dua pengode lain yang sepakat)
+   Acuan tanpa coder1             n= 69 | coder1: kappa 0.866
+        GPT-6 Astra*         kappa 0.704
+        Gemini 3.8 Flash*    kappa 0.784
+        DeepSeek V4 (T)*     kappa 0.702
+        DeepSeek V4          kappa 0.720
+        Command A            kappa 0.639
+   Acuan tanpa coder2             n= 70 | coder2: kappa 0.851
+        GPT-6 Astra*         kappa 0.739
+        Gemini 3.8 Flash*    kappa 0.803
+        DeepSeek V4 (T)*     kappa 0.723
+        DeepSeek V4          kappa 0.677
+        Command A            kappa 0.597
+   Acuan tanpa coder3             n= 77 | coder3: kappa 0.761
+        GPT-6 Astra*         kappa 0.762
+        Gemini 3.8 Flash*    kappa 0.836
+        DeepSeek V4 (T)*     kappa 0.747
+        DeepSeek V4          kappa 0.688
+        Command A            kappa 0.616
+
+Ditulis juga: hasil_mayoritas_koder.csv

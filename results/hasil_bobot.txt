@@ -1,0 +1,40 @@
+Kandidat: 2084 | sampel: 501 | jumlah bobot sampel: 2084.0
+
+BAGIAN 1. Strata (negara | periode | jenis)
+  strata                            N      n    p=n/N    bobot  cek kolom
+  FILIPINA|akhir|blok              34     12    0.353    2.833         ok
+  FILIPINA|akhir|prosa             55      8    0.145    6.875         ok
+  FILIPINA|awal|blok               14      9    0.643    1.556         ok
+  FILIPINA|awal|prosa              62     16    0.258    3.875         ok
+  INDONESIA|akhir|blok             48     18    0.375    2.667         ok
+  INDONESIA|akhir|prosa           176     25    0.142    7.040         ok
+  INDONESIA|awal|blok              70     46    0.657    1.522         ok
+  INDONESIA|awal|prosa            154     39    0.253    3.949         ok
+  MALAYSIA|akhir|blok              62     23    0.371    2.696         ok
+  MALAYSIA|akhir|prosa            339     48    0.142    7.062         ok
+  MALAYSIA|awal|blok               47     31    0.660    1.516         ok
+  MALAYSIA|awal|prosa             213     54    0.254    3.944         ok
+  SINGAPURA|akhir|blok             51     19    0.373    2.684         ok
+  SINGAPURA|akhir|prosa           350     49    0.140    7.143         ok
+  SINGAPURA|awal|blok              20     13    0.650    1.538         ok
+  SINGAPURA|awal|prosa            100     25    0.250    4.000         ok
+  THAILAND|akhir|blok              22      8    0.364    2.750         ok
+  THAILAND|akhir|prosa            138     19    0.138    7.263         ok
+  THAILAND|awal|blok               17     11    0.647    1.545         ok
+  THAILAND|awal|prosa              99     25    0.253    3.960         ok
+  VIETNAM|akhir|prosa              11      2    0.182    5.500         ok
+  VIETNAM|awal|prosa                2      1    0.500    2.000         ok
+
+BAGIAN 2. Kandidat / sampel per negara dan tahun
+  negara              2021        2022        2023        2024        2025        total
+  FILIPINA        13 /   2     22 /   9     41 /  14     43 /   8     46 /  12     165 /  45
+  INDONESIA       66 /  27     95 /  29     63 /  29    104 /  25    120 /  18     448 / 128
+  MALAYSIA        63 /  16     80 /  32    117 /  37    157 /  18    244 /  53     661 / 156
+  SINGAPURA       31 /   9     31 /   9     58 /  20    152 /  28    249 /  40     521 / 106
+  THAILAND        25 /  10     45 /   9     46 /  17     73 /  14     87 /  13     276 /  63
+  VIETNAM          0 /   0      0 /   0      2 /   1      3 /   0      8 /   2      13 /   3
+  TOTAL          198 /  64    273 /  88    327 / 118    532 /  93    754 / 138    2084 / 501
+
+BAGIAN 3. Bank dengan unit sampel: 19 dari 20 bank
+  Bank tanpa unit sampel: ['VIETCOMBANK']
+  Rincian bank x tahun ditulis ke tabel_bank_tahun.csv

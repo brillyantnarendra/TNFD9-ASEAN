@@ -1,0 +1,75 @@
+Berkas : banding_5model_501.csv
+Model  : hasil_model_gpt.csv, Hasil_Model_501_20260928_gemini.csv, Hasil_Model_501_20260928_cohere.csv, Hasil_Model_501_20261002_deepseek.csv, Hasil_Model_501_20261003_deepseek_think.csv
+
+hasil_model_gpt.csv  vs  Hasil_Model_501_20260928_gemini.csv   (n=501)
+  akurasi               : 0.6886  vs  0.6826
+  selisih               : +0.0060   SK95% [-0.0279, +0.0399]
+  hanya kiri benar (b)  : 40
+  hanya kanan benar (c) : 37
+  McNemar eksak p       : 0.8199
+
+hasil_model_gpt.csv  vs  Hasil_Model_501_20260928_cohere.csv   (n=501)
+  akurasi               : 0.6886  vs  0.5848
+  selisih               : +0.1038   SK95% [+0.0599, +0.1497]
+  hanya kiri benar (b)  : 95
+  hanya kanan benar (c) : 43
+  McNemar eksak p       : 1.13e-05
+
+hasil_model_gpt.csv  vs  Hasil_Model_501_20261002_deepseek.csv   (n=501)
+  akurasi               : 0.6886  vs  0.5988
+  selisih               : +0.0898   SK95% [+0.0479, +0.1297]
+  hanya kiri benar (b)  : 80
+  hanya kanan benar (c) : 35
+  McNemar eksak p       : 3.284e-05
+
+hasil_model_gpt.csv  vs  Hasil_Model_501_20261003_deepseek_think.csv   (n=501)
+  akurasi               : 0.6886  vs  0.6846
+  selisih               : +0.0040   SK95% [-0.0240, +0.0299]
+  hanya kiri benar (b)  : 26
+  hanya kanan benar (c) : 24
+  McNemar eksak p       : 0.8877
+
+Hasil_Model_501_20260928_gemini.csv  vs  Hasil_Model_501_20260928_cohere.csv   (n=501)
+  akurasi               : 0.6826  vs  0.5848
+  selisih               : +0.0978   SK95% [+0.0559, +0.1377]
+  hanya kiri benar (b)  : 83
+  hanya kanan benar (c) : 34
+  McNemar eksak p       : 6.776e-06
+
+Hasil_Model_501_20260928_gemini.csv  vs  Hasil_Model_501_20261002_deepseek.csv   (n=501)
+  akurasi               : 0.6826  vs  0.5988
+  selisih               : +0.0838   SK95% [+0.0479, +0.1198]
+  hanya kiri benar (b)  : 67
+  hanya kanan benar (c) : 25
+  McNemar eksak p       : 1.382e-05
+
+Hasil_Model_501_20260928_gemini.csv  vs  Hasil_Model_501_20261003_deepseek_think.csv   (n=501)
+  akurasi               : 0.6826  vs  0.6846
+  selisih               : -0.0020   SK95% [-0.0359, +0.0319]
+  hanya kiri benar (b)  : 36
+  hanya kanan benar (c) : 37
+  McNemar eksak p       : 1
+
+Hasil_Model_501_20260928_cohere.csv  vs  Hasil_Model_501_20261002_deepseek.csv   (n=501)
+  akurasi               : 0.5848  vs  0.5988
+  selisih               : -0.0140   SK95% [-0.0459, +0.0160]
+  hanya kiri benar (b)  : 29
+  hanya kanan benar (c) : 36
+  McNemar eksak p       : 0.457
+
+Hasil_Model_501_20260928_cohere.csv  vs  Hasil_Model_501_20261003_deepseek_think.csv   (n=501)
+  akurasi               : 0.5848  vs  0.6846
+  selisih               : -0.0998   SK95% [-0.1437, -0.0559]
+  hanya kiri benar (b)  : 40
+  hanya kanan benar (c) : 90
+  McNemar eksak p       : 1.372e-05
+
+Hasil_Model_501_20261002_deepseek.csv  vs  Hasil_Model_501_20261003_deepseek_think.csv   (n=501)
+  akurasi               : 0.5988  vs  0.6846
+  selisih               : -0.0858   SK95% [-0.1238, -0.0479]
+  hanya kiri benar (b)  : 29
+  hanya kanan benar (c) : 72
+  McNemar eksak p       : 2.237e-05
+
+10 pasangan diuji; ambang Bonferroni
+0.05/10 = 0.0050.

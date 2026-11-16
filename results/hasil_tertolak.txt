@@ -1,0 +1,13 @@
+
+one_peripheral_term: ukuran strata 3012 | dikode 75
+   sebaran kode: {'bukan alam': 36, 'bukan alam iklim': 19, 'B3': 7, 'B1': 6, 'B4': 3, 'B5': 2, 'A1': 1, 'rusak': 1}
+   berisi alam : 19/75 = 25.3% [16.9, 36.2] -> taksiran 763 unit [508, 1091]
+   isi pilar A : 1/75 = 1.3% [0.2, 7.2] -> taksiran 40 unit [7, 216]
+
+no_term: ukuran strata 99975 | dikode 75
+   sebaran kode: {'bukan alam': 59, 'bukan alam iklim': 7, 'B1': 5, 'B3': 1, 'A3': 1, 'rusak': 1, 'B4': 1}
+   berisi alam : 8/75 = 10.7% [5.5, 19.7] -> taksiran 10664 unit [5503, 19657]
+   isi pilar A : 1/75 = 1.3% [0.2, 7.2] -> taksiran 1333 unit [236, 7172]
+
+Taksiran titik total yang terlewat filter: berisi alam 11427 unit, isi pilar 1373 unit
+Pembanding: 2.084 unit kandidat lolos filter (sekitar 390 di antaranya isi pilar: 18.7% berbobot menurut gold)

@@ -1,0 +1,63 @@
+Unit: 501 | gold A=98 B=323 G=80
+
+================================================================
+GPT-6 Astra*
+================================================================
+   gold\model      A      B      G
+   A              76     11     11
+   B              23    259     41
+   G               0      8     72
+   Tiga kelompok: akurasi 0.812 | kappa 0.667 [0.609, 0.725]
+   Pilar vs bukan: presisi A 0.768 | recall A 0.776 | F1 A 0.772 | kappa 0.716
+   Hanya A/B di keduanya (n=369): kappa A vs B 0.756
+   Jumlah A: model 99 vs gold 98 (selisih +1)
+
+================================================================
+Gemini 3.8 Flash*
+================================================================
+   gold\model      A      B      G
+   A              77     12      9
+   B              30    240     53
+   G               1      5     74
+   Tiga kelompok: akurasi 0.780 | kappa 0.624 [0.568, 0.684]
+   Pilar vs bukan: presisi A 0.713 | recall A 0.786 | F1 A 0.748 | kappa 0.682
+   Hanya A/B di keduanya (n=359): kappa A vs B 0.706
+   Jumlah A: model 108 vs gold 98 (selisih +10)
+
+================================================================
+DeepSeek V4 (T)*
+================================================================
+   gold\model      A      B      G
+   A              77     11     10
+   B              26    250     47
+   G               0      4     76
+   Tiga kelompok: akurasi 0.804 | kappa 0.661 [0.597, 0.719]
+   Pilar vs bukan: presisi A 0.748 | recall A 0.786 | F1 A 0.766 | kappa 0.708
+   Hanya A/B di keduanya (n=364): kappa A vs B 0.738
+   Jumlah A: model 103 vs gold 98 (selisih +5)
+
+================================================================
+DeepSeek V4
+================================================================
+   gold\model      A      B      G
+   A              77      3     18
+   B              31    192    100
+   G               1      5     74
+   Tiga kelompok: akurasi 0.685 | kappa 0.506 [0.448, 0.563]
+   Pilar vs bukan: presisi A 0.706 | recall A 0.786 | F1 A 0.744 | kappa 0.678
+   Hanya A/B di keduanya (n=303): kappa A vs B 0.740
+   Jumlah A: model 109 vs gold 98 (selisih +11)
+
+================================================================
+Command A
+================================================================
+   gold\model      A      B      G
+   A              80      7     11
+   B              37    207     79
+   G               1      8     71
+   Tiga kelompok: akurasi 0.715 | kappa 0.537 [0.475, 0.599]
+   Pilar vs bukan: presisi A 0.678 | recall A 0.816 | F1 A 0.741 | kappa 0.670
+   Hanya A/B di keduanya (n=331): kappa A vs B 0.691
+   Jumlah A: model 118 vs gold 98 (selisih +20)
+
+Ditulis juga: hasil_kelompok_ab.csv

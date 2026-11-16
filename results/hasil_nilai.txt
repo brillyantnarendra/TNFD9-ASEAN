@@ -1,0 +1,352 @@
+
+==============================================================================
+MODEL: hasil_model_gpt.csv
+==============================================================================
+  Unit di gold standard        : 501
+  Unit di keluaran model       : 501
+  Dinilai (irisan)             : 501
+
+  RINGKAS
+  -------
+  Akurasi / micro-F1           : 0.6886  (345/501 tepat)
+  macro-F1 (semua kelas hadir) : 0.6054
+  MCC multikelas               : 0.6434
+  kappa Cohen model vs emas    : 0.6385
+  SK 95% macro-F1              : [0.5527, 0.6457]  (5000 ulangan)
+  SK 95% akurasi               : [0.6487, 0.7305]
+
+  PER KELAS  (support = jumlah di gold standard)
+  kelas                   presisi   recall       F1  support
+  A1                        0.750    0.667    0.706        9   (support < 10)
+  A2                        0.786    0.647    0.710       17
+  A3                        0.720    0.750    0.735       72
+  A4                        0.000    0.000    0.000        0   (support < 10)
+  B1                        0.744    0.511    0.606      131
+  B2                        0.778    1.000    0.875        7   (support < 10)
+  B3                        0.880    0.745    0.807       98
+  B4                        0.784    0.744    0.763       39
+  B5                        0.542    0.667    0.598       48
+  bukan alam                0.824    0.848    0.836       66
+  bukan alam, iklim         0.368    0.700    0.483       10
+  rusak                     0.081    0.750    0.146        4   (support < 10)
+  macro-F1 (support>=10)                      0.692         
+
+  MATRIKS KEBINGUNGAN  (baris = emas, kolom = model)
+                           A1     A2     A3     A4     B1     B2     B3     B4     B5 bukan  bukan   rusak
+  A1                        6      0      0      0      3      0      0      0      0      0      0      0
+  A2                        0     11      2      1      2      0      0      0      0      0      1      0
+  A3                        1      1     54      0      2      0      0      2      2      4      0      6
+  A4                        0      0      0      0      0      0      0      0      0      0      0      0
+  B1                        1      2     14      0     67      0      7      3     11      7      5     14
+  B2                        0      0      0      0      0      7      0      0      0      0      0      0
+  B3                        0      0      2      0      3      1     73      1     11      0      1      6
+  B4                        0      0      1      1      3      1      0     29      0      0      0      4
+  B5                        0      0      2      0      9      0      1      0     32      0      1      3
+  bukan alam                0      0      0      0      1      0      2      1      1     56      4      1
+  bukan alam, iklim         0      0      0      0      0      0      0      1      2      0      7      0
+  rusak                     0      0      0      0      0      0      0      0      0      1      0      3
+
+  SALAH TERBANYAK  (emas -> model)
+    B1                     -> A3                       14
+    B1                     -> rusak                    14
+    B3                     -> B5                       11
+    B1                     -> B5                       11
+    B5                     -> B1                        9
+    B1                     -> B3                        7
+    B1                     -> bukan alam                7
+    B3                     -> rusak                     6
+    A3                     -> rusak                     6
+    B1                     -> bukan alam, iklim         5
+    B4                     -> rusak                     4
+    bukan alam             -> bukan alam, iklim         4
+
+  KEPUTUSAN GERBANG  (rusak / bukan alam / bukan alam, iklim)
+    gerbang menurut emas       : 80
+    gerbang menurut model      : 124
+    presisi / recall / F1      : 0.581 / 0.900 / 0.706
+    kappa keputusan gerbang    : 0.6350
+
+==============================================================================
+MODEL: Hasil_Model_501_20260928_gemini.csv
+==============================================================================
+  Unit di gold standard        : 501
+  Unit di keluaran model       : 501
+  Dinilai (irisan)             : 501
+
+  RINGKAS
+  -------
+  Akurasi / micro-F1           : 0.6826  (342/501 tepat)
+  macro-F1 (semua kelas hadir) : 0.5859
+  MCC multikelas               : 0.6381
+  kappa Cohen model vs emas    : 0.6315
+  SK 95% macro-F1              : [0.5277, 0.6291]  (5000 ulangan)
+  SK 95% akurasi               : [0.6387, 0.7226]
+
+  PER KELAS  (support = jumlah di gold standard)
+  kelas                   presisi   recall       F1  support
+  A1                        0.778    0.778    0.778        9   (support < 10)
+  A2                        0.562    0.529    0.545       17
+  A3                        0.713    0.792    0.750       72
+  A4                        0.000    0.000    0.000        0   (support < 10)
+  B1                        0.805    0.504    0.620      131
+  B2                        0.714    0.714    0.714        7   (support < 10)
+  B3                        0.786    0.827    0.806       98
+  B4                        0.765    0.667    0.712       39
+  B5                        0.774    0.500    0.608       48
+  bukan alam                0.768    0.803    0.785       66
+  bukan alam, iklim         0.357    1.000    0.526       10
+  rusak                     0.103    1.000    0.186        4   (support < 10)
+  macro-F1 (support>=10)                      0.669         
+
+  MATRIKS KEBINGUNGAN  (baris = emas, kolom = model)
+                           A1     A2     A3     A4     B1     B2     B3     B4     B5 bukan  bukan   rusak
+  A1                        7      0      0      0      1      0      0      0      0      1      0      0
+  A2                        0      9      2      1      1      0      2      0      0      0      2      0
+  A3                        0      1     57      0      3      1      1      2      1      4      0      2
+  A4                        0      0      0      0      0      0      0      0      0      0      0      0
+  B1                        2      4     15      0     66      0     14      2      3      4      8     13
+  B2                        0      0      0      0      0      5      1      1      0      0      0      0
+  B3                        0      0      3      0      1      1     81      1      3      0      1      7
+  B4                        0      0      0      2      3      0      0     26      0      3      0      5
+  B5                        0      1      3      0      7      0      1      0     24      4      3      5
+  bukan alam                0      1      0      0      0      0      3      2      0     53      4      3
+  bukan alam, iklim         0      0      0      0      0      0      0      0      0      0     10      0
+  rusak                     0      0      0      0      0      0      0      0      0      0      0      4
+
+  SALAH TERBANYAK  (emas -> model)
+    B1                     -> A3                       15
+    B1                     -> B3                       14
+    B1                     -> rusak                    13
+    B1                     -> bukan alam, iklim         8
+    B3                     -> rusak                     7
+    B5                     -> B1                        7
+    B5                     -> rusak                     5
+    B4                     -> rusak                     5
+    B5                     -> bukan alam                4
+    B1                     -> bukan alam                4
+    B1                     -> A2                        4
+    bukan alam             -> bukan alam, iklim         4
+
+  KEPUTUSAN GERBANG  (rusak / bukan alam / bukan alam, iklim)
+    gerbang menurut emas       : 80
+    gerbang menurut model      : 136
+    presisi / recall / F1      : 0.544 / 0.925 / 0.685
+    kappa keputusan gerbang    : 0.6059
+
+==============================================================================
+MODEL: Hasil_Model_501_20260928_cohere.csv
+==============================================================================
+  Unit di gold standard        : 501
+  Unit di keluaran model       : 501
+  Dinilai (irisan)             : 501
+
+  RINGKAS
+  -------
+  Akurasi / micro-F1           : 0.5848  (293/501 tepat)
+  macro-F1 (semua kelas hadir) : 0.4550
+  MCC multikelas               : 0.5368
+  kappa Cohen model vs emas    : 0.5240
+  SK 95% macro-F1              : [0.4026, 0.4981]  (5000 ulangan)
+  SK 95% akurasi               : [0.5409, 0.6267]
+
+  PER KELAS  (support = jumlah di gold standard)
+  kelas                   presisi   recall       F1  support
+  A1                        0.750    0.667    0.706        9   (support < 10)
+  A2                        0.333    0.353    0.343       17
+  A3                        0.692    0.875    0.773       72
+  A4                        0.000    0.000    0.000        0   (support < 10)
+  B1                        0.852    0.397    0.542      131
+  B2                        0.122    0.714    0.208        7   (support < 10)
+  B3                        0.797    0.643    0.712       98
+  B4                        0.917    0.564    0.698       39
+  B5                        0.588    0.208    0.308       48
+  bukan alam                0.533    0.848    0.655       66
+  bukan alam, iklim         0.229    0.800    0.356       10
+  rusak                     0.095    0.500    0.160        4   (support < 10)
+  macro-F1 (support>=10)                      0.548         
+
+  MATRIKS KEBINGUNGAN  (baris = emas, kolom = model)
+                           A1     A2     A3     A4     B1     B2     B3     B4     B5 bukan  bukan   rusak
+  A1                        6      0      0      0      2      0      0      0      0      1      0      0
+  A2                        0      6      4      0      0      0      2      0      0      1      1      3
+  A3                        0      1     63      0      2      1      0      0      0      1      2      2
+  A4                        0      0      0      0      0      0      0      0      0      0      0      0
+  B1                        2      8     16      0     52     11      9      0      2     20      9      2
+  B2                        0      0      0      0      0      5      0      1      0      0      1      0
+  B3                        0      0      3      0      2     14     63      0      4      3      4      5
+  B4                        0      0      1      1      1      2      0     22      1      4      0      7
+  B5                        0      3      3      0      1      6      1      0     10     18      6      0
+  bukan alam                0      0      0      0      0      2      4      0      0     56      4      0
+  bukan alam, iklim         0      0      0      0      1      0      0      1      0      0      8      0
+  rusak                     0      0      1      0      0      0      0      0      0      1      0      2
+
+  SALAH TERBANYAK  (emas -> model)
+    B1                     -> bukan alam               20
+    B5                     -> bukan alam               18
+    B1                     -> A3                       16
+    B3                     -> B2                       14
+    B1                     -> B2                       11
+    B1                     -> bukan alam, iklim         9
+    B1                     -> B3                        9
+    B1                     -> A2                        8
+    B4                     -> rusak                     7
+    B5                     -> bukan alam, iklim         6
+    B5                     -> B2                        6
+    B3                     -> rusak                     5
+
+  KEPUTUSAN GERBANG  (rusak / bukan alam / bukan alam, iklim)
+    gerbang menurut emas       : 80
+    gerbang menurut model      : 161
+    presisi / recall / F1      : 0.441 / 0.887 / 0.589
+    kappa keputusan gerbang    : 0.4778
+
+==============================================================================
+MODEL: Hasil_Model_501_20261002_deepseek.csv
+==============================================================================
+  Unit di gold standard        : 501
+  Unit di keluaran model       : 501
+  Dinilai (irisan)             : 501
+
+  RINGKAS
+  -------
+  Akurasi / micro-F1           : 0.5988  (300/501 tepat)
+  macro-F1 (semua kelas hadir) : 0.5535
+  MCC multikelas               : 0.5528
+  kappa Cohen model vs emas    : 0.5381
+  SK 95% macro-F1              : [0.4891, 0.6021]  (5000 ulangan)
+  SK 95% akurasi               : [0.5549, 0.6407]
+
+  PER KELAS  (support = jumlah di gold standard)
+  kelas                   presisi   recall       F1  support
+  A1                        0.857    0.667    0.750        9   (support < 10)
+  A2                        0.583    0.412    0.483       17
+  A3                        0.667    0.833    0.741       72
+  B1                        0.911    0.389    0.545      131
+  B2                        0.500    0.714    0.588        7   (support < 10)
+  B3                        0.775    0.704    0.738       98
+  B4                        0.950    0.487    0.644       39
+  B5                        0.720    0.375    0.493       48
+  bukan alam                0.466    0.818    0.593       66
+  bukan alam, iklim         0.258    0.800    0.390       10
+  rusak                     0.067    0.750    0.122        4   (support < 10)
+  macro-F1 (support>=10)                      0.578         
+
+  MATRIKS KEBINGUNGAN  (baris = emas, kolom = model)
+                           A1     A2     A3     B1     B2     B3     B4     B5 bukan  bukan   rusak
+  A1                        6      0      0      0      0      0      0      0      2      0      1
+  A2                        0      7      4      0      0      2      0      0      1      0      3
+  A3                        0      0     60      0      0      1      0      0      5      1      5
+  B1                        1      5     18     51      2     13      0      4     23      7      7
+  B2                        0      0      0      0      5      0      0      0      0      1      1
+  B3                        0      0      3      0      1     69      0      3      7      3     12
+  B4                        0      0      1      3      2      0     19      0      5      0      9
+  B5                        0      0      3      1      0      1      0     18     19      5      1
+  bukan alam                0      0      0      0      0      3      0      0     54      6      3
+  bukan alam, iklim         0      0      0      1      0      0      1      0      0      8      0
+  rusak                     0      0      1      0      0      0      0      0      0      0      3
+
+  SALAH TERBANYAK  (emas -> model)
+    B1                     -> bukan alam               23
+    B5                     -> bukan alam               19
+    B1                     -> A3                       18
+    B1                     -> B3                       13
+    B3                     -> rusak                    12
+    B4                     -> rusak                     9
+    B1                     -> bukan alam, iklim         7
+    B1                     -> rusak                     7
+    B3                     -> bukan alam                7
+    bukan alam             -> bukan alam, iklim         6
+    B1                     -> A2                        5
+    B4                     -> bukan alam                5
+
+  KEPUTUSAN GERBANG  (rusak / bukan alam / bukan alam, iklim)
+    gerbang menurut emas       : 80
+    gerbang menurut model      : 192
+    presisi / recall / F1      : 0.385 / 0.925 / 0.544
+    kappa keputusan gerbang    : 0.4114
+
+==============================================================================
+MODEL: Hasil_Model_501_20261003_deepseek_think.csv
+==============================================================================
+  Unit di gold standard        : 501
+  Unit di keluaran model       : 501
+  Dinilai (irisan)             : 501
+
+  RINGKAS
+  -------
+  Akurasi / micro-F1           : 0.6846  (343/501 tepat)
+  macro-F1 (semua kelas hadir) : 0.5992
+  MCC multikelas               : 0.6398
+  kappa Cohen model vs emas    : 0.6336
+  SK 95% macro-F1              : [0.5384, 0.6432]  (5000 ulangan)
+  SK 95% akurasi               : [0.6427, 0.7246]
+
+  PER KELAS  (support = jumlah di gold standard)
+  kelas                   presisi   recall       F1  support
+  A1                        0.750    0.667    0.706        9   (support < 10)
+  A2                        0.714    0.588    0.645       17
+  A3                        0.709    0.778    0.742       72
+  A4                        0.000    0.000    0.000        0   (support < 10)
+  B1                        0.805    0.473    0.596      131
+  B2                        0.833    0.714    0.769        7   (support < 10)
+  B3                        0.785    0.745    0.764       98
+  B4                        0.861    0.795    0.827       39
+  B5                        0.585    0.646    0.614       48
+  bukan alam                0.695    0.864    0.770       66
+  bukan alam, iklim         0.429    0.900    0.581       10
+  rusak                     0.100    0.750    0.176        4   (support < 10)
+  macro-F1 (support>=10)                      0.692         
+
+  MATRIKS KEBINGUNGAN  (baris = emas, kolom = model)
+                           A1     A2     A3     A4     B1     B2     B3     B4     B5 bukan  bukan   rusak
+  A1                        6      0      0      0      3      0      0      0      0      0      0      0
+  A2                        0     10      2      2      1      0      1      0      0      0      1      0
+  A3                        0      1     56      0      2      1      1      1      1      4      0      5
+  A4                        0      0      0      0      0      0      0      0      0      0      0      0
+  B1                        2      3     14      0     62      0     13      2      7     10      5     13
+  B2                        0      0      0      0      0      5      0      1      0      1      0      0
+  B3                        0      0      3      0      2      0     73      1     13      1      0      5
+  B4                        0      0      1      0      3      0      0     31      0      1      0      3
+  B5                        0      0      3      0      4      0      2      0     31      6      2      0
+  bukan alam                0      0      0      0      0      0      3      0      1     57      4      1
+  bukan alam, iklim         0      0      0      0      0      0      0      0      0      1      9      0
+  rusak                     0      0      0      0      0      0      0      0      0      1      0      3
+
+  SALAH TERBANYAK  (emas -> model)
+    B1                     -> A3                       14
+    B3                     -> B5                       13
+    B1                     -> B3                       13
+    B1                     -> rusak                    13
+    B1                     -> bukan alam               10
+    B1                     -> B5                        7
+    B5                     -> bukan alam                6
+    B3                     -> rusak                     5
+    B1                     -> bukan alam, iklim         5
+    A3                     -> rusak                     5
+    A3                     -> bukan alam                4
+    bukan alam             -> bukan alam, iklim         4
+
+  KEPUTUSAN GERBANG  (rusak / bukan alam / bukan alam, iklim)
+    gerbang menurut emas       : 80
+    gerbang menurut model      : 133
+    presisi / recall / F1      : 0.571 / 0.950 / 0.714
+    kappa keputusan gerbang    : 0.6423
+
+==============================================================================
+KESEPAKATAN ANTARMODEL  (tidak bergantung gold standard manusia)
+==============================================================================
+  alpha Krippendorff antar 5 model : 0.6754   (n=501 unit)
+
+  hasil_model_gpt.csv     vs Hasil_Model_501_20260928_gem n=501  Po=0.8004  kappa=0.7712
+  hasil_model_gpt.csv     vs Hasil_Model_501_20260928_coh n=501  Po=0.6088  kappa=0.5556
+  hasil_model_gpt.csv     vs Hasil_Model_501_20261002_dee n=501  Po=0.6667  kappa=0.6182
+  hasil_model_gpt.csv     vs Hasil_Model_501_20261003_dee n=501  Po=0.8483  kappa=0.8258
+  Hasil_Model_501_20260928_gem vs Hasil_Model_501_20260928_coh n=501  Po=0.6407  kappa=0.5892
+  Hasil_Model_501_20260928_gem vs Hasil_Model_501_20261002_dee n=501  Po=0.7026  kappa=0.6570
+  Hasil_Model_501_20260928_gem vs Hasil_Model_501_20261003_dee n=501  Po=0.8064  kappa=0.7772
+  Hasil_Model_501_20260928_coh vs Hasil_Model_501_20261002_dee n=501  Po=0.7685  kappa=0.7316
+  Hasil_Model_501_20260928_coh vs Hasil_Model_501_20261003_dee n=501  Po=0.6327  kappa=0.5800
+  Hasil_Model_501_20261002_dee vs Hasil_Model_501_20261003_dee n=501  Po=0.7006  kappa=0.6544
+
+  Label per unit ditulis ke: banding_5model_501.csv
+

@@ -1,0 +1,24 @@
+
+target_A1 (9 unit)
+   id 135    coder1=a1 | coder2=a1 | coder3=a1
+   id 1030   coder1=a1 | coder2=a1 | coder3=a1
+   id 1683   coder1=a1 | coder2=a1 | coder3=a1
+   id 509    coder1=a1 | coder2=b3 | coder3=b3
+   id 644    coder1=a1 | coder2=a1 | coder3=a1
+   id 1368   coder1=a1 | coder2=a1 | coder3=a1
+   id 834    coder1=a1 | coder2=a1 | coder3=a1
+   id 835    coder1=a1 | coder2=a1 | coder3=a1
+   id 1770   coder1=a1 | coder2=a1 | coder3=a1
+   ketiga pengode memberi A1: 8 dari 9 unit | sebaran jumlah pengode yang setuju: {1: 1, 3: 8}
+
+target_GB (4 unit)
+   id 948    coder1=rusak | coder2=rusak | coder3=rusak
+   id 1063   coder1=rusak | coder2=rusak | coder3=a3
+   id 169    coder1=rusak | coder2=rusak | coder3=rusak
+   id 783    coder1=rusak | coder2=rusak | coder3=rusak
+   ketiga pengode memberi RUSAK: 3 dari 4 unit | sebaran jumlah pengode yang setuju: {2: 1, 3: 3}
+
+Alpha Krippendorff 3 pengode, 30 unit: 0.638  SK 95% [0.527, 0.739]
+   kappa coder1-coder2: 0.613
+   kappa coder1-coder3: 0.611
+   kappa coder2-coder3: 0.686

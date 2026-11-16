@@ -1,0 +1,56 @@
+Run reasoning   : hasil_model_gpt.csv, Hasil_Model_501_20260928_gemini.csv, Hasil_Model_501_20261003_deepseek_think.csv
+Run non-reasoning: Hasil_Model_501_20261002_deepseek.csv, Hasil_Model_501_20260928_cohere.csv
+Bobot dibaca untuk 501 unit, jumlah 2084.0
+Unit: 501
+
+========================================================================
+TIGA RUN REASONING (GPT-6 Astra, Gemini, DeepSeek thinking)
+========================================================================
+Kelompok                        n  cakupan   akurasi  SK Wilson 95%     berbobot (cakupan / akurasi)
+semua sepakat                 368    73.5%     79.3%  [74.9, 83.2]       72.8% /  75.6%
+mayoritas (bukan semua)       126    25.1%     42.9%  [34.6, 51.6]       25.7% /  44.6%
+tanpa mayoritas                 7     1.4%         -                      1.6% /     -
+
+Voting mayoritas (unit tanpa mayoritas dihitung salah): akurasi 69.1% (346/501)
+   run tunggal hasil_model_gpt.csv                      68.9%
+   run tunggal Hasil_Model_501_20260928_gemini.csv           68.3%
+   run tunggal Hasil_Model_501_20261003_deepseek_think.csv   68.5%
+
+Kesalahan yang tersisa pada unit 'semua sepakat' (gold -> label bersama):
+   B1                   -> A3                     9
+   B1                   -> rusak                  8
+   B1                   -> B3                     5
+   B3                   -> rusak                  4
+   B1                   -> bukan alam, iklim      4
+   bukan alam           -> bukan alam, iklim      4
+   B4                   -> rusak                  3
+   B5                   -> B1                     3
+   total salah meski semua sepakat: 76 dari 368
+
+========================================================================
+KELIMA RUN (pembanding)
+========================================================================
+Kelompok                        n  cakupan   akurasi  SK Wilson 95%     berbobot (cakupan / akurasi)
+semua sepakat                 254    50.7%     85.8%  [81.0, 89.6]       49.4% /  83.4%
+mayoritas (bukan semua)       208    41.5%     56.7%  [49.9, 63.3]       42.4% /  54.9%
+tanpa mayoritas                39     7.8%         -                      8.2% /     -
+
+Voting mayoritas (unit tanpa mayoritas dihitung salah): akurasi 67.1% (336/501)
+   run tunggal hasil_model_gpt.csv                      68.9%
+   run tunggal Hasil_Model_501_20260928_gemini.csv           68.3%
+   run tunggal Hasil_Model_501_20261003_deepseek_think.csv   68.5%
+   run tunggal Hasil_Model_501_20261002_deepseek.csv         59.9%
+   run tunggal Hasil_Model_501_20260928_cohere.csv     58.5%
+
+Kesalahan yang tersisa pada unit 'semua sepakat' (gold -> label bersama):
+   B1                   -> A3                     8
+   B1                   -> B3                     4
+   B1                   -> bukan alam, iklim      3
+   B1                   -> bukan alam             3
+   bukan alam           -> bukan alam, iklim      2
+   bukan alam           -> B3                     2
+   A2                   -> A3                     2
+   B3                   -> A3                     2
+   total salah meski semua sepakat: 36 dari 254
+
+Ditulis: triase_sepakat_hasil.csv

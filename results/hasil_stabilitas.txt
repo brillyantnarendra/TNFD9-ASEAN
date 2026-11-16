@@ -1,0 +1,97 @@
+
+============================================================================
+GPT-6 Astra*
+============================================================================
+   ulangan 1: run asli (banding_5model_501.csv)
+   ulangan 2: Ulang_gpt_r2.csv (501 unit, 0 galat)
+   ulangan 3: Ulang_gpt_r3.csv (501 unit, 0 galat)
+
+   ulangan      n  akurasi   kappa  macroF1 gerbang  B1>A3 porsi A awal/akhir/beda
+   1          501    0.689   0.639    0.692     124     14    21.5% /  19.1% /  -2.3
+   2          501    0.683   0.631    0.689     129     15    21.2% /  20.8% /  -0.3
+   3          501    0.693   0.643    0.703     127     13    21.0% /  18.7% /  -2.3
+   rentang akurasi 0.010 | rentang kappa 0.012
+
+   Antar-ulangan:
+   ulangan 1 vs 2: n=501 | label berubah 28 (5.6%) | kappa antar-ulangan 0.936
+   ulangan 1 vs 3: n=501 | label berubah 29 (5.8%) | kappa antar-ulangan 0.934
+   ulangan 2 vs 3: n=501 | label berubah 32 (6.4%) | kappa antar-ulangan 0.927
+
+============================================================================
+Gemini 3.8 Flash*
+============================================================================
+   ulangan 1: run asli (banding_5model_501.csv)
+   ulangan 2: Ulang_gemini_r2.csv (501 unit, 0 galat)
+   ulangan 3: Ulang_gemini_r3.csv (501 unit, 0 galat)
+
+   ulangan      n  akurasi   kappa  macroF1 gerbang  B1>A3 porsi A awal/akhir/beda
+   1          501    0.683   0.632    0.669     136     15    22.6% /  21.4% /  -1.2
+   2          501    0.681   0.629    0.671     137     16    21.9% /  20.7% /  -1.2
+   3          501    0.685   0.634    0.679     137     15    22.5% /  21.4% /  -1.0
+   rentang akurasi 0.004 | rentang kappa 0.005
+
+   Antar-ulangan:
+   ulangan 1 vs 2: n=501 | label berubah 38 (7.6%) | kappa antar-ulangan 0.913
+   ulangan 1 vs 3: n=501 | label berubah 38 (7.6%) | kappa antar-ulangan 0.913
+   ulangan 2 vs 3: n=501 | label berubah 34 (6.8%) | kappa antar-ulangan 0.922
+
+============================================================================
+DeepSeek V4 (T)*
+============================================================================
+   ulangan 1: run asli (banding_5model_501.csv)
+   ulangan 2: Ulang_dsthink_r2.csv (501 unit, 0 galat)
+   ulangan 3: Ulang_dsthink_r3.csv (501 unit, 0 galat)
+
+   ulangan      n  akurasi   kappa  macroF1 gerbang  B1>A3 porsi A awal/akhir/beda
+   1          501    0.685   0.634    0.692     133     14    22.9% /  19.2% /  -3.7
+   2          501    0.677   0.625    0.669     137     18    23.6% /  20.3% /  -3.4
+   3          501    0.671   0.619    0.665     143     16    23.1% /  21.0% /  -2.1
+   rentang akurasi 0.014 | rentang kappa 0.015
+
+   Antar-ulangan:
+   ulangan 1 vs 2: n=501 | label berubah 64 (12.8%) | kappa antar-ulangan 0.853
+   ulangan 1 vs 3: n=501 | label berubah 65 (13.0%) | kappa antar-ulangan 0.851
+   ulangan 2 vs 3: n=501 | label berubah 65 (13.0%) | kappa antar-ulangan 0.851
+
+============================================================================
+DeepSeek V4
+============================================================================
+   ulangan 1: run asli (banding_5model_501.csv)
+   ulangan 2: Ulang_ds_r2.csv (501 unit, 0 galat)
+   ulangan 3: Ulang_ds_r3.csv (501 unit, 0 galat)
+
+   ulangan      n  akurasi   kappa  macroF1 gerbang  B1>A3 porsi A awal/akhir/beda
+   1          501    0.599   0.538    0.578     192     18    23.6% /  24.7% /  +1.1
+   2          501    0.605   0.545    0.579     191     18    23.4% /  25.2% /  +1.8
+   3          501    0.611   0.551    0.583     189     18    23.4% /  25.2% /  +1.8
+   rentang akurasi 0.012 | rentang kappa 0.013
+
+   Antar-ulangan:
+   ulangan 1 vs 2: n=501 | label berubah 32 (6.4%) | kappa antar-ulangan 0.925
+   ulangan 1 vs 3: n=501 | label berubah 36 (7.2%) | kappa antar-ulangan 0.916
+   ulangan 2 vs 3: n=501 | label berubah 23 (4.6%) | kappa antar-ulangan 0.946
+
+============================================================================
+Command A
+============================================================================
+   ulangan 1: run asli (banding_5model_501.csv)
+   ulangan 2: Ulang_cohere_r2.csv (501 unit, 0 galat)
+   ulangan 3: Ulang_cohere_r3.csv (501 unit, 0 galat)
+
+   ulangan      n  akurasi   kappa  macroF1 gerbang  B1>A3 porsi A awal/akhir/beda
+   1          501    0.585   0.524    0.548     161     16    24.9% /  27.1% /  +2.2
+   2          501    0.587   0.525    0.543     159     16    25.1% /  27.6% /  +2.5
+   3          501    0.587   0.526    0.553     158     16    25.3% /  27.6% /  +2.3
+   rentang akurasi 0.002 | rentang kappa 0.002
+
+   Antar-ulangan:
+   ulangan 1 vs 2: n=501 | label berubah 20 (4.0%) | kappa antar-ulangan 0.954
+   ulangan 1 vs 3: n=501 | label berubah 17 (3.4%) | kappa antar-ulangan 0.961
+   ulangan 2 vs 3: n=501 | label berubah 13 (2.6%) | kappa antar-ulangan 0.970
+
+Selisih akurasi rata-rata terbesar antar konfigurasi penalaran: 0.011
+   GPT-6 Astra*         rata-rata akurasi 0.688
+   Gemini 3.8 Flash*    rata-rata akurasi 0.683
+   DeepSeek V4 (T)*     rata-rata akurasi 0.677
+
+Ditulis juga: hasil_stabilitas.csv

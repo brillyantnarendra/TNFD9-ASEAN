@@ -1,0 +1,32 @@
+
+GPT-6 Astra*  (hasil_model_gpt.jsonl)
+   baris log 647 | berhasil 501 | tanpa token/galat 146 | unit sah 501/501
+   501 jawaban sah : token masuk 3,327,230 | keluar 52,900 | median keluar 89 | maks keluar 362
+   semua berhasil  : token masuk 3,327,230 | keluar 52,900
+   harga belum diisi -> biaya tidak dihitung
+
+Gemini 3.8 Flash*  (Hasil_Model_501_20260928_gemini.jsonl)
+   baris log 501 | berhasil 501 | tanpa token/galat 0 | unit sah 501/501
+   501 jawaban sah : token masuk 3,428,664 | keluar 26,955 | median keluar 53 | maks keluar 246
+   semua berhasil  : token masuk 3,428,664 | keluar 26,955
+   harga belum diisi -> biaya tidak dihitung
+
+DeepSeek V4 (T)*  (Hasil_Model_501_20261003_deepseek_think.jsonl)
+   baris log 504 | berhasil 501 | tanpa token/galat 3 | unit sah 501/501
+   501 jawaban sah : token masuk 3,375,410 | keluar 1,109,696 | median keluar 1278 | maks keluar 15312
+   semua berhasil  : token masuk 3,375,410 | keluar 1,109,696
+   harga belum diisi -> biaya tidak dihitung
+
+DeepSeek V4  (Hasil_Model_501_20261002_deepseek.jsonl)
+   baris log 501 | berhasil 501 | tanpa token/galat 0 | unit sah 501/501
+   501 jawaban sah : token masuk 3,335,831 | keluar 24,495 | median keluar 49 | maks keluar 145
+   semua berhasil  : token masuk 3,335,831 | keluar 24,495
+   harga belum diisi -> biaya tidak dihitung
+
+Command A  (Hasil_Model_501_20260928_cohere.jsonl)
+   baris log 700 | berhasil 503 | tanpa token/galat 197 | unit sah 501/501
+   501 jawaban sah : token masuk 3,369,527 | keluar 30,692 | median keluar 59 | maks keluar 307
+   semua berhasil  : token masuk 3,383,237 | keluar 30,715
+   harga belum diisi -> biaya tidak dihitung
+
+Ditulis juga: hasil_token_biaya.csv
